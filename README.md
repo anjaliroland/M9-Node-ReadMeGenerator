@@ -1,24 +1,19 @@
 # Node README Generator
 
-<!--
+
 ## Table of Contents
 
 - [Description](#description)
     - [User Story](#user-story)
     - [Acceptance Criteria](#acceptance-criteria)
--[Technologies Used](#technologies-used)
+- [Technologies Used](#technologies-used)
 - [Usage](#usage)
 - [License](#license)
 
 ## Description
 
-Provide a short description explaining the what, why, and how of your project. Use the following questions as a guide:
+For this module's challenge we were tasked with creating a command line application, that using Node.js and the inquirer package generates a README file after a user answers prompts from the terminal. Using what we learned in class and the documentation from the links at the bottom of this page I was able to create an application that generates a README file that meets the below criteria: 
 
-- What was your motivation?
-- Why did you build this project? (Note: the answer is not "Because it was a homework assignment.")
-- What problem does it solve?
-- What did you learn?
--->
 ### User Story
 
 ```md
@@ -46,21 +41,20 @@ THEN this is added to the section of the README entitled Questions, with instruc
 WHEN I click on the links in the Table of Contents
 THEN I am taken to the corresponding section of the README
 ```
-<!--
+
 ## Technologies Used
 
 <ul>
 <li>HTML
 <li>CSS
 <li>JavaScript
-<li>
-<li>
+<li>NodeJS
+<li>Inquirer
+</ul>
 
 ## Usage
 
-Provide instructions and examples for use. Include screenshots as needed.
-
-![screenshot](./assets/images/screenshot.png)
+Video Demo: 
 
 ## License
 
@@ -68,4 +62,6 @@ Please refer to the LICENSE in the repo.
 
 ## Links
 
--->
+Inquirer Docs: https://www.npmjs.com/package/inquirer
+
+License Badges: https://shields.io/category/license
