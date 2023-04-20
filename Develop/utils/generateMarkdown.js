@@ -26,7 +26,7 @@ function renderLicenseLink(license) {
 // If there is no license, return an empty string
 const renderLicenseSection = (license) =>
   `![badge](${renderLicenseBadge(license)})  
-  For more information about this license visit '${renderLicenseLink(license)}'`;
+  For more information about this license visit this link: ${renderLicenseLink(license)}`;
 
 // Function to generate markdown for README
 const generateMarkdown = (data) => 
@@ -81,7 +81,7 @@ ___________________
 
 Feel free to check out my GitHub profile or email me if you have any questions with the links below.  
 
-**GitHub:**  'https://github.com/${data.github}'    
+**GitHub:**  https://github.com/${data.github}    
 **Email:**  ${data.email}  
 `;
 
