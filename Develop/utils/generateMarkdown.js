@@ -1,61 +1,90 @@
-// TODO: Create a function that returns a license badge based on which license is passed in
+// Function that returns a license badge based on which license is passed in
 // If there is no license, return an empty string
-function renderLicenseBadge(license) {}
+function renderLicenseBadge(license) {
+    const badges = {
+        MIT: 'https://img.shields.io/badge/License-MIT-yellow.svg',
+        ISC: 'https://img.shields.io/badge/License-ISC-blue.svg',
+        apache: 'https://img.shields.io/badge/License-Apache_2.0-blue.svg',
+        None: ''
+    }
+    return badges[license];
+};
 
-// TODO: Create a function that returns the license link
+// Function that returns the license link
 // If there is no license, return an empty string
-function renderLicenseLink(license) {}
+function renderLicenseLink(license) {
+    const links = {
+        MIT: 'https://opensource.org/licenses/MIT',
+        ISC: 'https://opensource.org/licenses/ISC',
+        apache: 'https://opensource.org/licenses/Apache-2.0',
+        none: ''
+    }
+    return links[license];
+};
 
-// TODO: Create a function that returns the license section of README
+// Function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {}
+function renderLicenseSection(license) {
+  renderLicenseBadge(license);
+  renderLicenseLink(license); 
+};
 
-// TODO: Create a function to generate markdown for README
-const generateMarkdown = (data) =>
-`# ${data.title}
+// Function to generate markdown for README
+const generateMarkdown = (data) => 
+`
+# ${data.title}  
 
-## Description
-${data.description}
+![badge](${renderLicenseBadge(data.license)})
 
-## Table of Contents
+## Description  
 
-    - [Description](#description)
-    - [Installation](#installation)
-    - [Usage](#usage)
-        - [Screenshot](#screenshot)
-    - [License](#license)
-    - [Contributing](#contributing)
-    - [Tests](#tests)
-    - [Questions](#questions)
+${data.description}  
+___________________
 
-## Installation
-${data.installation}
+## Table of Contents  
 
-## Usage
-${data.usage}
+- [Description](#description)
+- [Installation](#installation)
+- [Usage](#usage)
+- [License](#license)
+- [Contributing](#contributing)
+- [Tests](#tests)
+- [Questions](#questions)
+___________________
 
-### Screenshot(s)
-${data.screenshot}
+## Installation  
 
-## License
-${data.license}
+${data.installation}  
+___________________
 
-## Contributing
-${data.contributing}
+## Usage  
 
-## Tests
-${data.tests}
+${data.usage}  
+___________________
 
-## Questions
+## License  
 
-Feel free to check out my GitHub profile or email with any additional questions with the links below.
+This project is licensed under: ![license](${renderLicenseSection(data.license)})
+ 
+___________________
 
-GitHub: ${data.github}
-Email: ${data.email}
+## Contributing  
+
+${data.contributing}  
+___________________
+
+## Tests  
+
+${data.tests}  
+___________________
+
+## Questions  
+
+Feel free to check out my GitHub profile or email me if you have any questions with the links below.  
+
+**GitHub:**  ${data.github}  
+**Email:**  ${data.email}  
 `;
 
 
 module.exports = generateMarkdown;
-
-
-
