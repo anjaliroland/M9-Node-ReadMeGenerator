@@ -24,10 +24,9 @@ function renderLicenseLink(license) {
 
 // Function that returns the license section of README
 // If there is no license, return an empty string
-function renderLicenseSection(license) {
-  renderLicenseBadge(license);
-  renderLicenseLink(license); 
-};
+const renderLicenseSection = (license) =>
+  `![badge](${renderLicenseBadge(license)})  
+  For more information about this license visit '${renderLicenseLink(license)}'`;
 
 // Function to generate markdown for README
 const generateMarkdown = (data) => 
@@ -64,7 +63,7 @@ ___________________
 
 ## License  
 
-This project is licensed under: ![license](${renderLicenseSection(data.license)})
+This project is licensed under: ${renderLicenseSection(data.license)}
  
 ___________________
 
@@ -82,7 +81,7 @@ ___________________
 
 Feel free to check out my GitHub profile or email me if you have any questions with the links below.  
 
-**GitHub:**  ${data.github}  
+**GitHub:**  'https://github.com/${data.github}'    
 **Email:**  ${data.email}  
 `;
 
